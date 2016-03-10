@@ -1,0 +1,21 @@
+
+<% if current_user %>
+  <h5>Add a new review:</h5>
+  <%= form_for  [@product, @review] do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br>
+
+    <%= f.submit 'Save' %>
+
+  <% end %>
+
+<% else %>
+
+  <h5> You must to be logged to add reviews </h5>
+
+<% end %>
+
+
+  <br>
+

@@ -1,0 +1,27 @@
+
+<div class="row">
+  <div class="col s8 offset-s2">
+    <h1>All Products:</h1>
+    <ul class="collection">
+      <% @products.each do |product| %>
+        
+        <li class="collection-item"> 
+
+          <div class="row delete_margin_bottom valign-wrapper">
+            <div class="col s6 valign">
+              <p> 
+                <%= "#{product.title} - #{product.description} - #{product.deadline}" %>
+              </p>
+            </div>
+            <div class="col s6 valign">
+              <%= link_to("Edit", edit_user_product_path(product.user_id, product), class: "waves-effect waves-light btn") %>
+              <%= link_to("View", user_product_path(product.user_id, product), class: "waves-effect waves-light btn") %>
+                </div>
+              </div>
+        </li>
+
+      <% end %>
+    </ul>
+    <%= link_to("Back", "/", class: "waves-effect waves-light btn") %> 
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h5>Reviews:</h5>
+
+<% @reviews.each do |review| %>
+        
+  <li class="collection-item"> 
+    <div class="row delete_margin_bottom valign-wrapper">
+      <div class="col s6 valign">
+        <p> 
+          <%= "#{review.user_id} - #{review.description}" %>
+        </p>
+      </div>
+    </div>
+  </li>
+
+<% end %>
